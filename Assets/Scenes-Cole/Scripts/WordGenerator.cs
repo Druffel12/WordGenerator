@@ -13,17 +13,21 @@ public class WordGenerator : MonoBehaviour
 	void Start ()
     {
        int ArraySelect = Random.Range(1,4);
-      
-        switch(ArraySelect)
+        int PhraseSelect = 0;
+        switch (ArraySelect)
         {
             case 1:
-                int PhraseSelect = Random.Range(0, 20);
+                PhraseSelect = Random.Range(0, 20);
+                break;
             case 2:
-                int PhraseSelect = Random.Range(0, 8);
+                PhraseSelect = Random.Range(0, 8);
+                break;
             case 3:
-                int PhraseSelect = Random.Range(0, 9);
+                PhraseSelect = Random.Range(0, 9);
+                break;
             case 4:
-                int PhraseSelect = Random.Range(0, 18)
+                PhraseSelect = Random.Range(0, 18);
+                break;
         }
 	}
 	
