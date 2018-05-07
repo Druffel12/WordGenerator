@@ -11,11 +11,11 @@ public class Dictionary : MonoBehaviour {
     public string[] WordBaseReferences;
     void Start()
     {
-        // total possible adds 54
-        WordBaseGeneral = new string[]//19
+        // total possible adds 55
+        WordBaseGeneral = new string[]//20
         {
          "Shit", "Fuck", "Ass" , "Asshole", "Bitch",//5
-         "Dickhead", "Dumbass", "Fuck Boi", "Fuckwit",//4
+         "Dickhead", "Dumbass", "Fuck Boi", "Fuckwit", "Fucknugget",//5
          "Mother Fucker", "Jackass","Suckass", "Lardass",//4
          "Shitcunt", "Shiznit", "Thundercunt",  "MAGA",//4
          "Wang-Chung", "No U"//2
