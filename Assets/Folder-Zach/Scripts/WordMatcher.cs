@@ -47,7 +47,7 @@ public class WordMatcher : MonoBehaviour
     void CorrectWord()
     {
         Stats.score += 1;
-        Stats.time += 4;
+        Stats.time += 2;
         successSound.Play();
         Instantiate(deerPrefab, spawnPoint, Quaternion.identity);
         inputField.text = null;
