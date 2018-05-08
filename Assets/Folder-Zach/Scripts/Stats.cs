@@ -7,37 +7,75 @@ using UnityEngine.UI;
 public class Stats : MonoBehaviour
 {
     public AudioSource metalMusic;
+    //public AudioSource newTimeAudio;
+
+    public Animator textFlash;
+    //public Animation textFlashUnderTen;
 
     public static int score;
     public int startScore = 0;
     public static float time;
-    public float startTime = 30;
+    public float countdown;
 
     public Text timeText;
+    public Text countdownText;
 
     public GameObject gameOverButton;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
+        time = Random.Range(30, 60);
+        countdown = 30;
+        StartCoroutine(ChangeTime());
+
+        textFlash.StartPlayback();
+
         metalMusic.Play();
         score = startScore;
-        time = startTime;
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    IEnumerator ChangeTime()
+    {
+        while (true)
+        {
+            //newTimeAudio.Play();
+
+            yield return new WaitForSeconds(30);
+
+            float newTime = Random.Range(5, 91);
+
+            time = newTime;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         time -= 1 * Time.deltaTime;
+        countdown -= 1 * Time.deltaTime;
 
         time = Mathf.Clamp(time, 0f, Mathf.Infinity);
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-        timeText.text = string.Format("{0:00.00}", time);
+        timeText.text = string.Format("{0:00.0}", time);
+        countdownText.text = string.Format("{0:00.00}", countdown);
 
         if (time <= 0)
         {
             time = 0;
             EndGame();
+        }
+
+        if (countdown <= 0)
+        {
+            countdown = 30;
+            textFlash.StartPlayback();
+        }
+
+        if (countdown <= 10 && countdown > 0)
+        {
+            textFlash.StopPlayback();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftAlt))
@@ -53,7 +91,7 @@ public class Stats : MonoBehaviour
     void EndGame()
     {
         metalMusic.Stop();
-        //Time.timeScale = 0;
+        StopAllCoroutines();
         gameOverButton.SetActive(true);
     }
 
