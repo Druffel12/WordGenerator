@@ -29,7 +29,11 @@ public class Dictionary : MonoBehaviour {
 
         WordBaseSexual = new string[]//10
         {
+<<<<<<< HEAD
           "Va-j-j", "Skeet",  "Rimjob", "Skullfuck", "Cucking",//5
+=======
+          "Va-j-j", "Skeet",  "Rimjob", "Skullfuck",//4
+>>>>>>> Zach
           "Dicks", "Penis", "Schlong", "Twat", "Fuck Titty",//5
         };
 
