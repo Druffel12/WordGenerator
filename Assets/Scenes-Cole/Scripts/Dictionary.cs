@@ -11,31 +11,32 @@ public class Dictionary : MonoBehaviour {
     public string[] WordBaseReferences;
     void Start()
     {
-        // total possible adds 60
-        WordBaseGeneral = new string[]//22
+        // total possible adds 66
+        WordBaseGeneral = new string[]//23
         {
          "Shit", "Fuck", "Ass" , "Asshole", "Bitch",//5
          "Dickhead", "Dumbass", "Fuck Boi", "Fuckwit", "Fucknugget",//5
          "Mother Fucker", "Jackass","Suckass", "Lardass",//4
          "Shitcunt", "Shiznit", "Thundercunt",  "MAGA",//4
-         "Wang-Chung", "No U", "Shizno", "Cockbite"//4
+         "Wang-Chung", "No U", "Shizno", "Cockbite", "Cuck"//5
         };
 
-        WordBaseNames = new string[]//10
+        WordBaseNames = new string[]//12
         {
-         "Dale", "Paul", "Zach", "Cole", "Terry",//5
-         "Levi", "Mom", "Wyatt", "Knebel", "Kobey Deer"//5
+         "Dale", "Paul", "Zach", "Cole", "Terry", "Margaret Thatcher",//6
+         "Levi", "Mom", "Wyatt", "Knebel", "Kobey Deer", "Cameron-Zachary"//6
         };
 
-        WordBaseSexual = new string[]//9
+        WordBaseSexual = new string[]//10
         {
-          "Va-j-j", "Skeet",  "Rimjob", "Skullfuck",//4
-          "Dicks", "Penis", "Schlong", "Twat", "Fuck-Titty",//5
+
+          "Va-j-j", "Skeet",  "Rimjob", "Skullfuck", "Cucking",//5
+          "Dicks", "Penis", "Schlong", "Twat", "Fuck Titty",//5
         };
 
-        WordBaseReferences = new string[]//20
+        WordBaseReferences = new string[]//21
         {
-            "Wubb-Lubba-Dub-Dub", "Han shot first",//2 
+            "Wubb-Lubba-Dub-Dub", "Han shot first", "They're taking the hobbits to Isengard!",//3 
             "Wax on wax off", "I find your lack of faith disturbing.",//2
             "Do or do not, there is no try.", "He's dead, Jim!",//2
             "Oh my god they killed Kenny! You Bastards!", "Bring out your dead",//2
