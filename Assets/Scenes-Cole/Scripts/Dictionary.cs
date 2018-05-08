@@ -11,7 +11,7 @@ public class Dictionary : MonoBehaviour {
     public string[] WordBaseReferences;
     void Start()
     {
-        // total possible adds 59
+        // total possible adds 60
         WordBaseGeneral = new string[]//22
         {
          "Shit", "Fuck", "Ass" , "Asshole", "Bitch",//5
@@ -33,7 +33,7 @@ public class Dictionary : MonoBehaviour {
           "Dicks", "Penis", "Schlong", "Twat", "Fuck-Titty",//5
         };
 
-        WordBaseReferences = new string[]//19
+        WordBaseReferences = new string[]//20
         {
             "Wubb-Lubba-Dub-Dub", "Han shot first",//2 
             "Wax on wax off", "I find your lack of faith disturbing.",//2
@@ -44,7 +44,7 @@ public class Dictionary : MonoBehaviour {
             "You maniacs! You blew it up! Oh, damn you! Damn you all to hell!",//1
             "ET phone home", "What... is the air-speed velocity of an unladen swallow?",//2
             "I'm sorry, Dave. I'm afraid I can't do that.",  "One ring to rule them all",//2
-            "Now your thinking with portals.", "REDROCKET", "REDRUM"//3 
+            "Now your thinking with portals.", "REDROCKET", "REDRUM", "Praise the sun"//4 
         };
     }
 }

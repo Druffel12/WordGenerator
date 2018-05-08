@@ -13,6 +13,8 @@ public class WordGenerator : MonoBehaviour
     bool Array4;
     List<int> NoNos;
     //HOTDAWG
+
+    Dictionary words;
 	// Use this for initialization
 
         // selecting wanted arrays
@@ -63,16 +65,16 @@ public class WordGenerator : MonoBehaviour
         switch (ArraySelect)
         {
             case 1:
-                PhraseSelect = Random.Range(0, 22);
+                PhraseSelect = Random.Range(0, words.WordBaseGeneral.Length);
                 break;
             case 2:
-                PhraseSelect = Random.Range(0, 8);
+                PhraseSelect = Random.Range(0, words.WordBaseNames.Length);
                 break;
             case 3:
-                PhraseSelect = Random.Range(0, 9);
+                PhraseSelect = Random.Range(0, words.WordBaseSexual.Length);
                 break;
             case 4:
-                PhraseSelect = Random.Range(0, 19);
+                PhraseSelect = Random.Range(0, words.WordBaseReferences.Length);
                 break;
         }
 	}
