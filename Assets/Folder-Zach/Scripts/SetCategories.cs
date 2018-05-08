@@ -54,4 +54,9 @@ public class SetCategories : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
 }

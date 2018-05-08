@@ -10,7 +10,6 @@ public class Stats : MonoBehaviour
     //public AudioSource newTimeAudio;
 
     public Animator textFlash;
-    //public Animation textFlashUnderTen;
 
     public static int score;
     public int startScore = 0;
@@ -43,7 +42,7 @@ public class Stats : MonoBehaviour
 
             yield return new WaitForSeconds(30);
 
-            float newTime = Random.Range(5, 91);
+            float newTime = Random.Range(5, 10);
 
             time = newTime;
         }

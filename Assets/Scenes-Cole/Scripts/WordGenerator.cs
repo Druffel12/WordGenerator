@@ -6,27 +6,24 @@ public class WordGenerator : MonoBehaviour
 {
     
     private int ArraySelect;
-    private int PhraseSelect;
-    bool Array1;
-    bool Array2;
-    bool Array3;
-    bool Array4;
+    public int PhraseSelect;
     List<int> NoNos;
     //HOTDAWG
-
-    Dictionary words;
+    public string chosenPhrase;
+    public Dictionary words;
+    SetCategories bools;
 	// Use this for initialization
 
         // selecting wanted arrays
     int arraySelect()
     {
         int retval = -1;
-        int start = Random.Range(1, 4);
+        int start = Random.Range(1, 5);
         
         while(true)
         {
             bool foundNumber = true;
-            for (int i =0; i < NoNos.Count; i++)
+            for (int i = 0; i < NoNos.Count; i++)
             {
                 if(start == NoNos[i])
                 {
@@ -50,32 +47,47 @@ public class WordGenerator : MonoBehaviour
         return retval;
     }
 
-    //filtering arrays with rand values to find word selected
-	void Start ()
+     public void chooseNewPhrase()
     {
-        NoNos = new List<int>();
-
-        if (Array1) { NoNos.Add(1); }
-        if (Array2) { NoNos.Add(2); }
-        if (Array3) { NoNos.Add(3); }
-        if (Array4) { NoNos.Add(4); }
-
         int ArraySelect = arraySelect();
-        int PhraseSelect = 0;
+        PhraseSelect = 0;
         switch (ArraySelect)
         {
             case 1:
                 PhraseSelect = Random.Range(0, words.WordBaseGeneral.Length);
+                chosenPhrase = words.WordBaseGeneral[PhraseSelect];
                 break;
             case 2:
                 PhraseSelect = Random.Range(0, words.WordBaseNames.Length);
+                chosenPhrase = words.WordBaseNames[PhraseSelect];
                 break;
             case 3:
                 PhraseSelect = Random.Range(0, words.WordBaseSexual.Length);
+                chosenPhrase = words.WordBaseSexual[PhraseSelect];
                 break;
             case 4:
                 PhraseSelect = Random.Range(0, words.WordBaseReferences.Length);
+                chosenPhrase = words.WordBaseReferences[PhraseSelect];
                 break;
         }
+    }
+
+    //filtering arrays with rand values to find word selected
+	void Start ()
+    {
+        
+       // chooseNewPhrase();      
 	}
+
+    void Awake()
+    {
+        NoNos = new List<int>();
+        bools = FindObjectOfType<SetCategories>();
+        if (!bools.insultsArray) { NoNos.Add(1); }
+        if (!bools.namesArray) { NoNos.Add(2); }
+        if (!bools.xxxArray) { NoNos.Add(3); }
+        if (!bools.memesArray) { NoNos.Add(4); }
+
+
+    }
 }
