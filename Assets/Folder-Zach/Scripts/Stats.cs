@@ -19,7 +19,7 @@ public class Stats : MonoBehaviour
     public Text timeText;
     public Text countdownText;
 
-    public GameObject gameOverButton;
+    public GameObject gameOverButton, toggleOption;
 
     // Use this for initialization
     void Start()
@@ -96,6 +96,7 @@ public class Stats : MonoBehaviour
 
     public void BackToMenu()
     {
+        Destroy(ServiceLocator.instance.toggleOptions);
         SceneManager.LoadScene("MainMenu");
     }
 }
