@@ -11,14 +11,14 @@ public class Dictionary : MonoBehaviour {
     public string[] WordBaseReferences;
     void Start()
     {
-        // total possible adds 205
+        // total possible adds 206
         WordBaseGeneral = new string[]
         {
          "Shit", "Fuck", "Ass" , "Asshole", "Bitch", "Dipshit", "Douche Nozzle", "Douche Pickle", "Whore",
          "Dickhead", "Dumbass", "Fuck Boi", "Fuckwit", "Fucknugget", "Douchebag", "Cunt", "Shithead",
          "Mother Fucker", "Jackass","Suckass", "Lardass", "Dipass", "Cock sucker", "Cock", "Sister Fister",
          "Shitcunt", "Shiznit", "Thundercunt",  "MAGA", "Wanker", "Pisspot", "Twatwaffle", "Fuck-knuckle",
-         "Wang-Chung", "No U", "Shizno", "Cockbite", "Cuck", "Loser", "Idiot", "Moron", "Gold-digger"
+         "Wang-Chung", "No U", "Shizno", "Cockbite", "Cuck", "Loser", "Idiot", "Moron", "Gold-digger", "Sandvich"
          
         };
 
